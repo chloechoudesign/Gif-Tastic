@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-var disneyMovies = ["The Little Mermaid", "Aladdin", "Ratatouille", "The Lion King", "Toy Story", "Beauty and the Beast", "Up" ];
+var disneyMovies = ["The Little Mermaid", "Aladdin", "Ratatouille", "The Lion King", "Toy Story", "Beauty and the Beast", "Frozen" ];
 
 function renderButtons(){
   $('#button-view').empty();
@@ -23,6 +23,8 @@ $('#add-movie').click(function(){
 });
 
 function displayGifs(){
+  $('#movie-view').empty();
+
   var movie = $(this).attr('data-name');
   console.log(movie);
   var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + movie + "&api_key=dc6zaTOxFJmzC";
@@ -41,8 +43,12 @@ function displayGifs(){
         var rating = result[i].rating;
         var p = $('<p>').text('Rating: ' + rating);
         var image = $('<img>');
-        image.attr('src', result[i].images.fixed_height.url);
-
+        image.attr('src', result[i].images.fixed_height_still.url);
+        image.addClass('gif');
+        image.attr('data-state', 'still');
+        image.attr('data-animate', result[i].images.fixed_height.url);
+        image.attr('data-still', result[i].images.fixed_height_still.url);
+        
         gifDiv.prepend(p);
         gifDiv.prepend(image);
 
@@ -51,12 +57,23 @@ function displayGifs(){
     });
 }
 
+function checkState() {
+   var state = $(this).attr('data-state');
+   console.log(state);
+
+  if (state === 'still'){
+    var animateURL = $(this).attr('data-animate');
+    $(this).attr('src', animateURL);
+    $(this).attr('data-state', 'animate');
+  } else {
+    var stillURL = $(this).attr('data-still');
+    $(this).attr('src', stillURL);
+    $(this).attr('data-state', 'still');
+  }
+}
 
 
-
-
-
-
+$(document).on("click", ".gif", checkState);
 $(document).on("click", ".movieBtn", displayGifs);
 renderButtons();
 });
