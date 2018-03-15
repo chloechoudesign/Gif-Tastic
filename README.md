@@ -18,7 +18,6 @@
 - Bootstrap
 - Giphy API
 - AJAX
-
 <br/>
 
 
