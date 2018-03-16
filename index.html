@@ -2,38 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Gif-Tastic!</title>
 
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Baloo+Paaji|Quicksand:700" rel="stylesheet">
 </head>
 <body>
   <div class="container">
 
     <div class="row">
 
-      <div class="col-md-3 sidebar">
+      <div class="col-md-12">
+        <h1>What Are Your Favorite TV Shows?</h1>
         
+        <div id="button-view"></div>  
+
         <form id="movie-form">
-          <label for="movie-input">Add a Disney movie</label>
+          <label for="movie-input">Go on and add another show !</label>
           <input type="text" id="movie-input">
       
           <input type="submit" id="add-movie" value="Add">
         </form>
 
-        <div id="button-view"></div>
-      </div>
-    
-      <div class="col-md-9">
-        <h1>Disney GIFs</h1>
         <div id="movie-view"></div>
       </div>
-
+    
     </div>
    
 
   </div>
+  
+  <!-- borders -->
+  <div id="top"></div>
+  <div id="bottom"></div>
+  <div id="left"></div>
+  <div id="right"></div>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="assets/javascript/app.js"></script>

@@ -1,14 +1,14 @@
 $(document).ready(function(){
 
-var disneyMovies = ["The Little Mermaid", "Aladdin", "Ratatouille", "The Lion King", "Toy Story", "Beauty and the Beast", "Frozen" ];
+var tvShows = ["Mad Men", "Modern Family", "Breaking Bad", "The Office", "The Simpsons", "Prison break", "How I Met Your Mother", "Stranger Things", "Game of Thrones", "Sherlock", "Westworld", "This is Us", "Friends", "The Walking Dead", "The Big Bang Thoery", "House of Cards", "Narcos", "That '70s Show"];
 
 function renderButtons(){
   $('#button-view').empty();
-  for (var i = 0; i < disneyMovies.length; i++){
+  for (var i = 0; i < tvShows.length; i++){
     var renderBtns = $('<button>');
-    renderBtns.text(disneyMovies[i]);
-    renderBtns.attr('data-name', disneyMovies[i]);
-    renderBtns.addClass('btn btn-primary movieBtn');
+    renderBtns.text(tvShows[i]);
+    renderBtns.attr('data-name', tvShows[i]);
+    renderBtns.addClass('movieBtn');
     $('#button-view').append(renderBtns);
   }
 }
@@ -17,8 +17,8 @@ $('#add-movie').click(function(){
   event.preventDefault();
   var userInput = $('#movie-input').val().trim();
   //console.log(userInput);
-  disneyMovies.push(userInput);
-  //console.log(disneyMovies);
+  tvShows.push(userInput);
+  //console.log(tvShows);
   renderButtons();
 });
 

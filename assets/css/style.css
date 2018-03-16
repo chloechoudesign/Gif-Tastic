@@ -1,13 +1,76 @@
-.sidebar{
-  margin-top: 25px;
-  border: 2px solid #000;
-  padding-top: 20px;
-  padding-bottom: 20px;
+body {
+  background: linear-gradient(to right, #C99CBC, #7996C7);
+  padding: 30px;
+  text-align: center;
 }
 
-.btn{
-  display: block;
+h1{
+  margin-top: 60px;
+  margin-bottom: 40px;
+  color: #fff;
+  font-family: 'Baloo Paaji', cursive;
+  font-size: 65px;
+  text-transform: uppercase;
+}
+
+#button-view {
+  margin: 0 auto;
+  width: 90%;
+  margin-bottom: 40px;
+}
+
+.movieBtn {
+  display: inline-block;
+  margin-left: 10px;
   margin-top: 10px;
+  padding: 12px;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #fff;
+  background-color: #3C3261;
+  letter-spacing: 1px;
+  border: 4px solid #3C3261;
+  border-radius: 2px;
+}
+
+.movieBtn:hover {
+  border: 4px solid transparent;
+  -moz-border-image: -moz-linear-gradient(top, #C99CBC 0%, #7996C7 100%);
+  -webkit-border-image: -webkit-linear-gradient(top, #C99CBC 0%, #7996C7 100%);
+  border-image: linear-gradient(to bottom, #C99CBC 0%, #7996C7 100%);
+  border-image-slice: 1;
+}
+
+label[for=movie-input] {
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+}
+
+input[type="text"] {
+   width: 180px;
+   border-radius: 2px;
+   border: none;
+   padding: 5px;
+}
+
+#add-movie {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 2px;
+  border: none;
+  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #3C3261;
+  color: #fff;
+}
+
+#movie-view {
+  margin-top: 50px;
 }
 
 .item{
@@ -15,6 +78,48 @@
   margin-left: 10px;
 }
 
-h1{
-  margin-bottom: 30px;
+p {
+  font-family: 'Quicksand', sans-serif;
+  color: #fff;
 }
+
+
+/* borders */
+#top,
+#bottom,
+#left,
+#right {
+  background-color: #3C3261;
+  position: fixed;
+}
+
+#left,
+#right {
+  top: 0;
+  bottom: 0;
+  width: 15px;
+}
+
+#left {
+  left: 0;
+}
+
+#right {
+  right: 0;
+}
+
+#top,
+#bottom {
+  left: 0;
+  right: 0;
+  height: 15px;
+}
+
+#top {
+  top: 0;
+}
+
+#bottom {
+  bottom: 0;
+}
+
