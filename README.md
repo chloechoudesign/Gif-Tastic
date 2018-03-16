@@ -18,6 +18,10 @@
 - Bootstrap
 - Giphy API
 - AJAX
+
 <br/>
+<img width="600" alt="8" src="https://user-images.githubusercontent.com/28972721/37251271-b7cf8a0a-24c1-11e8-841f-6241f7fe2ccf.png">
+
+<img width="600" alt="9" src="https://user-images.githubusercontent.com/28972721/37251272-b7e33118-24c1-11e8-84cc-37beafa24380.png">
 
 
